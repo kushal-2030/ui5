@@ -1,0 +1,18 @@
+/* Enter your custom styles here */
+.title1{
+    font-size: 30px;
+}
+.IDGenList1
+{
+    border-radius: 25%;
+}
+.id_opacity{
+    opacity: 70%;
+}
+.id_bold{
+    color: black;
+    font-weight: 500;
+}
+.small{
+ float: left;
+}

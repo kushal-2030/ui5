@@ -1,0 +1,38 @@
+[
+    {
+    "Chart": "1239102",
+    "Name": "Process",
+    "Category": "Projector",
+    "SupplierName": "Titanium",
+    "Description": "A very powerful projector with special features for Internet usability, USB",
+    "WeightMeasure": 1467,
+    "WeightUnit": "g",
+    "Price": 50,
+    "CurrencyCode": "EUR",
+    "Status": "Available",
+    "Quantity": 3,
+    "UoM": "PC",
+    "Width": 51,
+    "Depth": 42,
+    "Height": 18,
+    "DimUnit": "cm"
+  },
+  {
+    "Chart": "2212-121-828",
+    "Name": "New",
+    "Category": "Graphics Card",
+    "SupplierName": "Technocom",
+    "Description": "Gladiator MX: DDR2 RoHS 128MB Supporting 512MB Clock rate: 350 MHz Memory Clock: 533 MHz, Bus Type: PCI-Express, Memory Type: DDR2 Memory Bus: 32-bit Highlighted Features: DVI Out, TV Out , HDTV",
+    "WeightMeasure": 321,
+    "WeightUnit": "g",
+    "Price": 40,
+    "CurrencyCode": "EUR",
+    "Status": "Discontinued",
+    "Quantity": 10,
+    "UoM": "PC",
+    "Width": 34,
+    "Depth": 14,
+    "Height": 2,
+    "DimUnit": "cm"
+  }
+]

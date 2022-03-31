@@ -1,0 +1,75 @@
+[
+
+    {
+
+        "id":"a","Name":"Agency Record"
+
+    },
+
+    {
+
+        "id":"b","Name":"Corporate Record"
+
+    },
+
+    {
+
+        "id":"c","Name":"Source Change Request"
+
+    },
+
+    {
+
+        "id":"d","Name":"Medicinal Product"
+
+    },
+
+    {
+
+        "id":"e","Name":"Packaged Medicinal Product"
+
+    },
+
+    {
+
+        "id":"f","Name":"Pharmaceutical Product"
+
+    },
+
+    {
+
+        "id":"g","Name":"Medical Device"
+
+    },
+
+    {
+
+        "id":"h","Name":"Manufactured Item"
+
+    },
+
+    {
+
+        "id":"i","Name":"Substance"
+
+    },
+
+    {
+
+        "id":"j","Name":"Product Family"
+
+    },
+
+    {
+
+        "id":"k","Name":"Marketing Authorization"
+
+    },
+
+    {
+
+        "id":"l","Name":"Manufacturer's Information"
+
+    }
+
+]

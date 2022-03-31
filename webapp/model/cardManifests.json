@@ -1,0 +1,76 @@
+{
+"donut": {
+    "sap.app": {
+        "id": "sample.CardsLayout.model.donut",
+        "type": "card"
+    },
+    "sap.card": {
+        "type": "Analytical",
+        "header": {
+            "title": "Open Items",
+            "Subtitle":"By Priority"
+        },
+        "content": {
+            "chartType": "Donut",
+            "legend": {
+                "visible": true,
+                "position": "Bottom",
+                "alignment": "Left"
+            },
+            "plotArea": {
+                "dataLabel": {
+                    "visible": true,
+                    "showTotal": true
+                }
+            },
+            "title": {
+                "visible": false
+            },
+            "Subtitle":{
+                "visible":false
+            },
+            "measureAxis": "size",
+            "dimensionAxis": "color",
+            "data": {
+                "json": {
+                    "measures": [
+                        {
+                            "measureName": "No Priority",
+                            "value": 1564235.29
+                        },
+                        {
+                            "measureName": "No Priority",
+                            "value": 157913.07
+                        },
+                        {
+                            "measureName": "Low",
+                            "value": 1085567.22
+                        },
+                        {
+                            "measureName": "Low",
+                            "value": 245609.486884
+                        },
+                        {
+                            "measureName": "High",
+                            "value": 345292.06
+                        },
+                        {
+                            "measureName": "High",
+                            "value": 82922.07
+                        }
+                    ]
+                },
+                "path": "/measures"
+            },
+            "dimensions": [{
+                "label": "Measure Name",
+                "value": "{measureName}"
+            }],
+            "measures": [{
+                "label": "Value",
+                "value": "{value}"
+            }]
+        }
+    }
+}
+}

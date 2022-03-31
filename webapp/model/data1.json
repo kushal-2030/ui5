@@ -1,0 +1,144 @@
+{
+    "data1":[
+        {  
+            "name":"Parmaceutical Product Task",
+            "Priority":"Priority:Low",
+            "Due":"Due:12/10/2021",
+            "ID":"ID:000222333111223",
+            "Description":"Description:Herbapax Syrup",
+            "Lastseen":"10 min ago",
+            "Highlight":"Success"
+        },
+        {
+            "name":"Substance  Task",
+            "Priority":"Priority:High",
+            "Due":"Due:12/11/2021",
+            "ID":"ID:100000092115",
+            "Description":"Description:Sodium chloride",
+            "Lastseen":"8 hours ago",
+            "Highlight":"Error"
+        },
+        {
+            "name":"Medical Device Task",
+            "Priority":"Priority:No priority",
+            "Due":"Due:12/08/2021",
+            "ID":"ID:000222333111223",
+            "Description":"Description:Injection Pen",
+            "Lastseen":" 1day ago",
+            "Highlight":"Warning"
+        }
+        ],
+        "data2":[{
+            "id":"Nasic AT-(1-27713)",
+            "type":"corparate record",
+            "time":"1 week ago"
+         },
+         {
+            "id":"Benzydamin HCL Spary 1,5 mg/ml AT via DCP(138498)",
+            "type":"corparate record",
+            "time":"1 months ago"
+         },
+         {
+            "id":"Contramuntan sirup DE(51079.00.00)",
+            "type":"Agency record",
+            "time":"2 months ago"
+         },
+         {
+            "id":"Herbapax Syrup UA(UA/15161/01/01)",
+            "type":"Agency record",
+            "time":"1 week ago"
+         }],
+        
+        "dropdown":[
+             {
+        "id":"A","Name":"Agency Record"
+        }
+        ,{
+            "id":"b","Name":"Corporate Record"
+        },{
+            "id":"c","Name":"Source Change Request"
+        },
+        {
+            "id":"d","Name":"Medicinal Product"
+        },
+        {
+            "id":"e","Name":"Packaged Medicinal Product"
+        },
+        {
+            "id":"f","Name":"Pharmaceutical Product"
+        },
+        {
+            "id":"g","Name":"Medical Device"
+        },
+        {
+            "id":"h","Name":"Manufactured Item"
+        },
+        {
+            "id":"i","Name":"Substance"
+        },
+        {
+            "id":"j","Name":"Product Family"
+        },
+        {
+            "id":"k","Name":"Marketing Authorization"
+        },
+        {
+            "id":"l","Name":"Manufacturer's Information"
+        }
+    ],
+    "list4":{
+        "_version": "1.15.0",
+        "sap.app": {
+            "id": "card.explorer.actions.list.card",
+            "type": "card",
+            "title": "Sample of Actions in Cards"  
+        },
+        "sap.ui": {
+            "technology": "UI5",
+            "icons": {
+                "icon": "sap-icon://action"
+            }
+        },
+        "sap.card": {
+            "type": "List",
+            "header": {
+                "title": "Quick Links"
+            },
+            "content": {
+                "data": {
+                    "json": [
+                        {
+                            "Name": "Event View",
+                            "icon": "sap-icon://accelerated",
+                            "url": "/careers"
+                        },
+                        {
+                            "Name": "Relation List",
+                            "icon": "sap-icon://org-chart"
+                        },
+                        {
+                            "Name": "Marketing  Authorisation Map View",
+                            "icon": "sap-icon://globe"
+                        },
+                        {
+                            "Name": "Responsibility Assignment",
+                            "icon": "sap-icon://leads",
+                            "url": "/businessGoals"
+                        },
+                        {
+                            "Name": "Product family",
+                            "icon": "sap-icon://group-2"
+                        }
+                    ]
+                },
+                "item": {
+                    "icon": {
+                        "src": "{icon}"
+                    },
+                    "title": "{Name}"
+                   
+                }
+            }
+        }
+    }
+}

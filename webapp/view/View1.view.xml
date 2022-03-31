@@ -1,0 +1,618 @@
+<mvc:View
+     xmlns:form="sap.ui.layout.form"
+    controllerName="demo1.polaris1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:sl="sap.ui.comp.navpopover"
+    xmlns:card="sap.f.cards"
+    xmlns:f="sap.f"
+    xmlns:smartChart="sap.ui.comp.smartchart"
+	xmlns:m="sap.m"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:l="sap.ui.layout"
+    xmlns:cssgrid="sap.ui.layout.cssgrid"
+    xmlns:w="sap.ui.integration.widgets"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    height="100%"
+    >
+
+    <App id="app" >
+    <Page id="_IDGenPage1">
+     <Panel id='settingsPanel' class="panelStyle" height="100%">
+	<layout:HorizontalLayout id="_IDGenHorizontalLayout1">
+    <layout:VerticalLayout id="_IDGenVBox1"  class="sapUiSmallMarginTop"  >
+                            <f:Card id="_IDGenCard5" class="sapUiSmallMarginBegin"  >
+                                <f:header > 
+                                </f:header>
+                                <f:content>
+                                <VBox id="_IDGenVBox5">
+                                <IconTabHeader id="_IDGenIconTabHeader1" mode="Inline" select="selectedItem">
+                                                <items>
+                                                    <IconTabFilter id="_IDGenIconTabFilter1" key="" text="My favorites" />
+                                                    <IconTabFilter id="_IDGenIconTabFilter2" key="" text="My recent records"/>
+                                                </items>
+                                            </IconTabHeader>
+                                 <HBox id="_IDGenHBox3">
+                                 <Text id="_IDGenText5" text="Viewing :" wrapping="false" class="sapUiSmallMargin"/>
+                                  <MultiComboBox id="_IDGenMultiComboBox" class="sapUiSmallMargin" maxWidth="40%"
+                                    items="{/Docs}">
+                                    <core:Item id="_IDGenItem" key="{id}" text="{Name}"/>
+                                </MultiComboBox>
+                                 </HBox>           
+                                
+                               <List id="_IDGenList2"
+                                        items="{/Meetups}">
+                                        <CustomListItem id="_IDGenCustomListItem2" type="Navigation" press="onPress">
+                                            <VBox id="_IDGenHBox2"  >
+                                                <VBox id="_IDGenVBox3" class="sapUiSmallMarginBegin sapUiSmallMarginTop" >
+                                                    <Text id="_IDGenTitle3" class="id_bold"  text="{id}" maxLines="auto" />
+                                                    <Text id="_IDGenText4" class="id_opacity" text="{type}" />
+                                                </VBox>  
+                                            </VBox> 
+                                            <VBox id="_IDGenVBox6" alignItems="End" class="id_space">
+                                                    <Text id="_IDGenText6" class="id_opacity"  busy="false" text="{time}"/>
+                                            </VBox>
+                                        </CustomListItem>
+                                      
+                                    </List>
+                                </VBox>
+                               
+                                    
+                                </f:content>
+                            </f:Card>
+                            <f:Card id="_IDGenCard6" class="sapUiSmallMargin" >
+                                <f:header>
+                                    <card:Header id="_IDGenHeader2"
+                                        title="My Inbox"
+                                        subtitle=""
+                                        iconSrc="sap-icon://inbox" />
+                                </f:header>
+                                <f:content>
+                                
+                                
+                                    <VBox id="_IDGenVBox4">
+                                     <HBox id="_IDGenHBox">
+                                        <Text id="_IDGenText3" text="Viewing :"  wrapping="false" class="sapUiSmallMargin"/>
+                                        <MultiComboBox id="_IDGenMultiComboBoxs"   class="sapUiSmallMargin" maxWidth="40%"
+                                            items="{/Cats}">
+                                            <core:Item id="_IDGenItems" key="{id}" text="{Name}"/>
+                                        </MultiComboBox>
+                                    </HBox>      
+                                    <List id="_IDGenList1" 
+                                        showSeparators="None" 
+                                        items="{/Cats}">
+                                        <CustomListItem id="_IDGenCustomListItem1" highlight="{Highlight}"  class="id_round">
+                                            <HBox id="_IDGenHBox1" alignItems="Center" justifyContent="SpaceAround" >
+                                                <VBox id="_IDGenVBox2"  alignItems="Start" class="sapUiSmallMarginTopBottom sapUiSmallMarginTop" >
+                                                    <Title id="_IDGenTitle1" level="H3"  class="id_bold" text="{name}" />
+                                                    <Text id="_IDGenText2" text="Priority :{Priority}" />
+                                                    <Text id="_IDGenText0" text="Due :{Due}" />
+                                                    <HBox id="_IDGenHBox111">
+                                                        <Text id="_IDGenText8" text="Product ID :"/>
+                                                        <Text id="_IDGenText" class="id_colorblue" text="{ID}" />  
+                                                    </HBox>
+                                                    <Text id="_IDGenTex" text=" Description :{Description}"/>
+                                                    <Text id="_IDGenTexs" class="id_opacity" text="{Lastseen}"/>
+                                                </VBox>
+
+                                                <Button id="_IDGenButton1" text="View" type="Default"></Button>
+    
+                                            </HBox>
+                                        </CustomListItem>
+                                    </List>
+                                    <HBox id="_IDGenHBox10" alignItems="Center" justifyContent="Center">
+                                     <Button id="_IDGenButton2" text="View All" textDirection="Inherit" type="Emphasized"/>
+                                    </HBox>
+                                   
+                                    </VBox>
+                                </f:content>
+                            </f:Card>
+                    </layout:VerticalLayout>
+                    <layout:VerticalLayout id="_IDGenVBox7" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+                    <HBox id="_IDGenHBoxf11" width="90%">
+                        <layout:HorizontalLayout id="_IDGenHBox8" class="sapUiLargeMarginBegin">
+                        	<smartFilterBar:SmartFilterBar id="smartFilterBar"
+                                smartVariant="__SVM01" useToolbar="false" entitySet="LineItemsSet">
+                                    <smartFilterBar:controlConfiguration>
+                                        		<smartFilterBar:ControlConfiguration id="_IDGenControlConfiguration1"
+                                                    key="MyOwnFilterField" index="1" label="Object Type"
+                                                    groupId="_BASIC"
+                                                    visibleInAdvancedArea="true" >
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="foo" >
+                                                                 <core:Item id="_IDGenItem2" key="1" text="ONE"/>
+                                                                 <core:Item id="_IDGenItem3" key="2" text="TWO"/>
+                                                                 <core:Item id="_IDGenItem4" key="3" text="THREE"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                        </smartFilterBar:ControlConfiguration>
+                                                <smartFilterBar:ControlConfiguration id="_IDGenControlConfigurtation1"
+                                                    key="MyOwnFilterField1" index="2" label="Record Type"
+                                                    groupId="_BASIC1">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="foog" >
+                                                                 <core:Item id="_IDGehnItem2" key="1" text="Desp2"/>
+                                                                 <core:Item id="_IDGenItehm3" key="2" text="Desp3"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+
+                                                 <smartFilterBar:ControlConfiguration id="_IDGyenControlConfigurtation1"
+                                                    key="MyOwnFilterField12" index="3" label="Description"
+                                                    groupId="_BASIC13">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fohog" >
+                                                                 <core:Item id="_IDGeuhnItem2" key="1" text="Complete"/>
+                                                                 <core:Item id="_IDGehnItehm3" key="2" text="Pending"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+
+                                                   <smartFilterBar:ControlConfiguration id="_IDGyenControlConfigurtationt1"
+                                                    key="MyOwnFilterField162" index="3" label="Interacting Organization"
+                                                    groupId="_BASIC134">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fohohg" >
+                                                                 <core:Item id="_IDGeuhhnItem2" key="1" text="India"/>
+                                                                 <core:Item id="_IDGehngItehm3" key="2" text="China"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+                                                <smartFilterBar:ControlConfiguration id="_IDGenContrlolConfiguration1"
+                                                    key="MyOwnFilterField0" index="4" label="Country"
+                                                    groupId="_BASIC99">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="folo" >
+                                                                 <core:Item id="_IDlGenItem2" key="1" text="ONE"/>
+                                                                 <core:Item id="_IDGenItlem3" key="2" text="TWO"/>
+                                                                 <core:Item id="_IDGenItlem4" key="3" text="THREE"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                        </smartFilterBar:ControlConfiguration>
+                                                  <smartFilterBar:ControlConfiguration id="_IDGenContrlolConfiuguration1"
+                                                    key="MyOwnFilterField099" index="5" label="Lifecycle status"
+                                                    groupId="_BASIC979">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="foluo" >
+                                                                 <core:Item id="_IDlGenuItem2" key="1" text="ONE"/>
+                                                                 <core:Item id="_IDGenIutlem3" key="2" text="TWO"/>
+                                                                 <core:Item id="_IDGenIutlem4" key="3" text="THREE"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                        </smartFilterBar:ControlConfiguration>
+                                    </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+                          </layout:HorizontalLayout>
+                          </HBox>
+                          <layout:HorizontalLayout id="_IDGenHorizontalLayout2" class="sapUiMediumMarginBegin">
+                               <f:Card id="_IDGenCard21"  class="sapUiSmallMarginBeginEnd sapUiSmallMarginTop">
+                                <f:header>
+                                    </f:header>
+                                    <f:content>
+                                    
+                                        <VBox id="_IDGenVBox4yy"
+                                            class="sapUiSmallMargin"
+                                            alignItems="Stretch">
+                                            <HBox id="_IDGenHBoxu">
+                                            <smartFilterBar:SmartFilterBar id="smartFiltuerBar"
+                                             smartVariant="__SVM01" useToolbar="false" entitySet="LineItemsSet">
+                                                 <smartFilterBar:controlConfiguration>
+                                        		<smartFilterBar:ControlConfiguration id="_IDGenContruolConfiguration1"
+                                                    key="MyOwnFilterField" index="1" label="Object Type"
+                                                    groupId="_BASIC"
+                                                    visibleInAdvancedArea="true">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fouo" >
+                                                                 <core:Item id="_IDGuenItem2" key="1" text="ONE"/>
+                                                                 <core:Item id="_IDGeunItem3" key="2" text="TWO"/>
+                                                                 <core:Item id="_IDGenuItem4" key="3" text="THREE"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                        </smartFilterBar:ControlConfiguration>
+                                                <smartFilterBar:ControlConfiguration id="_IDGenControluConfigurtation1"
+                                                    key="MyOwnFilterField1" index="2" label="Record Type"
+                                                    groupId="_BASIC1">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fooug" >
+                                                                 <core:Item id="_IDGehnItuem2" key="1" text="New"/>
+                                                                 <core:Item id="_IDGuenItehm3" key="2" text="In process"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+
+                                                 <smartFilterBar:ControlConfiguration id="_IDGyeunControlConfigurtation"
+                                                    key="MyOwnFilterField12" index="3" label="life cycle status" 
+                                                    groupId="_BASIC13">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fohoug" >
+                                                                 <core:Item id="_IDGeuhnIteum2"  text="Complete"/>
+                                                                 <core:Item id="_IDGehnuItehm3"  text="Pending"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+
+                                                   <smartFilterBar:ControlConfiguration id="_IDGyenConturolConfigurtationt1"
+                                                    key="MyOwnFilterField1y2" index="4" label="Agent" 
+                                                    groupId="_BASIC153">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fohouiig" >
+                                                                 <core:Item id="_IDGeuhuhnItem2"  text="Agent1"/>
+                                                                 <core:Item id="_IDGehnguItehm3" text="Agent2"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+
+                                                 <smartFilterBar:ControlConfiguration id="_IDGyenConturyolConfigurtationt1"
+                                                    key="MyOwnFilterField1yy2" index="4" label="Workflow status" 
+                                                    groupId="_BASIC153">
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="fohouiyig" >
+                                                                 <core:Item id="_IDGeuhuhntItem2"  text="Status2"/>
+                                                                 <core:Item id="_IDGehngutItehm3" text="Status2"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                    </smartFilterBar:ControlConfiguration>
+                                    </smartFilterBar:controlConfiguration>
+                            </smartFilterBar:SmartFilterBar>
+                                                <!-- <fb:FilterBar  id="_IDGenFilterBar11" header="Overview on Task">
+                                                    <fb:filterGroupItems >
+                                                        <fb:FilterGroupItem id="_IDGenFilterGroupItem21" groupName="__$INTERNAL$" name="a" label="Item" partOfCurrentVariant="true" visibleInFilterBar="true" >
+                                                            <fb:control>
+                                                            <ComboBox id="_IDGenComboBox1"  placeholder="All" />
+                                                            </fb:control>
+                                                        </fb:FilterGroupItem>
+                                                    </fb:filterGroupItems>
+
+                                                    <fb:filterGroupItems>
+                                                        <fb:FilterGroupItem id="_IDGenFilterGroupItem22" groupName="__$INTERNAL$" name="a1" label="Task Priority" partOfCurrentVariant="true" visibleInFilterBar="true">
+                                                            <fb:control>
+                                                                <ComboBox id="_IDGenComboBox3"  placeholder="All" />
+                                                            </fb:control>
+                                                        </fb:FilterGroupItem>
+                                                    </fb:filterGroupItems>
+
+                                                    <fb:filterGroupItems>
+                                                        <fb:FilterGroupItem id="_IDGenFilterGroupItem32" groupName="__$INTERNAL$" name="a2" label="Task status" partOfCurrentVariant="true" visibleInFilterBar="true">
+                                                            <fb:control>
+                                                                <ComboBox id="_IDGenComboBox2"  showValueStateMessage="true" placeholder="All" class="sapuiMarginBeginLeft" items="{/Meetups}" >
+                                                                    <core:Item id="_IDGenItem1" key="{Title}" text="{MeetupID}"/>
+                                                                </ComboBox>
+                                                            </fb:control>
+                                                        </fb:FilterGroupItem>
+                                                    </fb:filterGroupItems>
+
+                                                    <fb:filterGroupItems>
+                                                        <fb:FilterGroupItem id="_IDGenFilterGroupItem42" groupName="__$INTERNAL$" name="a3" label="Resource" partOfCurrentVariant="true" visibleInFilterBar="true">
+                                                            <fb:control>
+                                                                <Input id="_IDGenSearchField42" showValueHelp="true" ></Input>
+                                                            </fb:control>
+                                                        </fb:FilterGroupItem>
+                                                    </fb:filterGroupItems>
+                                                    
+                                                  
+    
+                                                </fb:FilterBar> -->
+                                            </HBox>
+                                            <HBox id="_IDGenHBoxSt" justifyContent="Inherit" class="sapUiSmallMarginTop" >
+                                                <f:Card id="_IDGenCarder4">
+                                                    <f:header>
+                                                        <card:Header id="_IDGenHeadere6"
+                                                                title="Open Items"
+                                                                subtitle="By Priority 35"
+                                                                iconSrc="sap-icon://overflow"
+                                                                />
+                                                        </f:header>
+                                                        <f:content >
+                                                            <VBox id="_IDGenVBoxh" alignItems="Center" >
+                                                                <HBox id="_IDGenHBox04">
+                                                                <smartChart:SmartChart id="_IDGenSmartChart1" 
+                                                                       header="Open Items"
+                                                                       showToolbar="false"
+                                                                        enableAutoBinding="true"
+                                                                        entitySet="Products"
+                                                                        legendVisible="true" 
+                                                                        showChartTypeSelectionButton="false" 
+                                                                        showVariantManagement="false" 
+                                                                        showDrillButtons="false" 
+                                                                        showLegendButton="false" 
+                                                                        chartType="donut"
+                                                                        width="300px"
+                                                                        fitContainer="false"
+                                                                        height="300px"
+                                                                       
+                                                                        >
+                                                                        	<!-- <smartChart:semanticObjectController>
+                                                                                    <sl:SemanticObjectController id="_IDGenSemanticObjectController1"
+                                                                                        navigationTargetsObtained="onNavigationTargetsObtained" navigate="onNavigate"/>
+                                                                                </smartChart:semanticObjectController> -->
+                                                                                 </smartChart:SmartChart>
+                                                                    <!-- <viz:VizFrame id="idVizFrame3" uiConfig="{applicationSet:'fiori'}"  metadataContexts="true"  vizType='donut' >
+                                                                        <viz:dataset >
+                                                                            <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="">
+                                                                                <viz.data:dimensions>
+                                                                                    <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="ITEMS" value="{data>name}" />
+                                                                                </viz.data:dimensions>
+                                                                                <viz.data:measures>
+                                                                                    <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="MAY" value="{data>income}" />
+                                                                                    <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="JUNE" value="{data>cost}" /> 
+                                                                                </viz.data:measures>
+                                                                            </viz.data:FlattenedDataset>
+                                                                        </viz:dataset>           
+                                                                        <viz:feeds>
+                                                                        <viz.feeds:FeedItem id='valueAxisFeed1' uid="valueAxis" type="Measure" values="MAY" />
+                                                                            <viz.feeds:FeedItem id='valueAxisFeed3' uid="size" type="Measure" values="JUNE" />
+                                                                            <viz.feeds:FeedItem id="_IDGenFeedItem2" uid="color" type="Dimension" values="ITEMS" />
+                                                                        </viz:feeds>
+                                                                        
+                                                                    </viz:VizFrame> -->
+                                                                </HBox>
+                                                            </VBox>
+                                                        </f:content>
+                                                    </f:Card>
+                                                    <f:Card id="_IDGenCasrder4"  class="sapUiSmallMarginBegin" >
+                                                    <f:header>
+                                                        <card:Header id="_IDGensHeadere6"
+                                                                title="Open Items"
+                                                                subtitle="By Status 35"
+                                                                iconSrc="sap-icon://overflow"
+                                                            
+                                                                />
+                                                        </f:header>
+                                                        <f:content >
+                                                            <VBox id="_IDGesnVBoxh" alignItems="Center" >
+                                                                    <smartChart:SmartChart id="_IDGenSmartChart12"
+                                                                        showToolbar="false"
+                                                                        showZoomButtons="false"
+                                                                        enableAutoBinding="true"
+                                                                        entitySet="Charts"
+                                                                        legendVisible="true" 
+                                                                        showChartTypeSelectionButton="false" 
+                                                                        showVariantManagement="false" 
+                                                                        showDrillButtons="false" 
+                                                                        showLegendButton="false" 
+                                                                        chartType="donut"
+                                                                        width="300px"
+                                                                        height="300px"
+                                                                        >
+                                                                        	<smartChart:semanticObjectController>
+                                                                                    <sl:SemanticObjectController id="_IDGenSemanticObjectController12"
+                                                                                        navigationTargetsObtained="onNavigationTargetsObtained" navigate="onNavigate"/>
+                                                                                </smartChart:semanticObjectController>
+                                                                            </smartChart:SmartChart>
+                                                                <!-- <HBox id="_IDGenHBox0s" >
+                                                                
+                                                                    <viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" metadataContexts="false"  vizType='donut'>
+                                                                        <viz:dataset>
+                                                                            <viz.data:FlattenedDataset id="_IDGenFlattenedDatasest1" data="">
+                                                                                <viz.data:dimensions>
+                                                                                    <viz.data:DimensionDefinition id="_IDGenDimensionDsefinition1" name="ITEMS" value="{data>name}" />
+                                                                                </viz.data:dimensions>
+                                                                                <viz.data:measures>
+                                                                                    <viz.data:MeasureDefinition id="_IDGenMeasuresDefinition1" name="MAY" value="{data>income}" />
+                                                                                    <viz.data:MeasureDefinition id="_IDGenMeassureDefinition2" name="JUNE" value="{data>cost}" /> 
+                                                                                </viz.data:measures>
+                                                                            </viz.data:FlattenedDataset>
+                                                                        </viz:dataset>           
+                                                                        <viz:feeds>
+                                                                        <viz.feeds:FeedItem id='valueAxissFeed1' uid="valueAxis" type="Measure" values="MAY" />
+                                                                            <viz.feeds:FeedItem id='valueAxsisFeed3' uid="size" type="Measure" values="JUNE" />
+                                                                            <viz.feeds:FeedItem id="_IDGenFesedItem2" uid="color" type="Dimension" values="ITEMS" />
+                                                                        </viz:feeds>
+                                                                        
+                                                                    </viz:VizFrame>
+                                                                </HBox> -->
+                                                            </VBox>
+                                                        </f:content>
+                                                    </f:Card>
+                                            </HBox>  
+                                            <HBox id="_IDGenHBox1ww1"  class="sapUiSmallMarginTop">
+                                            <VBox id="_IDGenHBox11">
+                                                <f:Card id="_IDGenCarder4gf" >
+                                              
+                                                    <f:header>
+                                                        <card:Header id="_IDGenHeadter22"
+                                                                title="Registered Products"
+                                                                subtitle="By Counrty"
+                                                                iconSrc="sap-icon://overflow"
+                                                                />
+                                    
+                                                            
+                                                    </f:header>
+                                                        <f:content>
+                                                            <VBox id="_IDGenVBoxhfd"
+                                                                justifyContent="SpaceBetween">
+                                                                
+                                                                <HBox id="_IDGenHBox04fd" justifyContent="SpaceBetween">
+                                                                    <smartChart:SmartChart id="_IDGenSmartChart123"
+                                                                        showToolbar="false"
+                                                                        enableAutoBinding="true"
+                                                                        entitySet="Bars"
+                                                                        width="300px"
+                                                                        height="470px"
+                                                                        legendVisible="false"
+                                                                        showDimensionsTitle="false"
+                                                                        showMeasuresTitle="false"
+                                                                        
+                                                                        >
+                                                                        	<!-- <smartChart:semanticObjectController>
+                                                                                    <sl:SemanticObjectController id="_IDGenSemanticObjectController142"
+                                                                                        navigationTargetsObtained="onNavigationTargetsObtained" navigate="onNavigate"/>
+                                                                                </smartChart:semanticObjectController> -->
+                                                                            </smartChart:SmartChart>
+
+                                                                    <!-- <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}"  vizType='bar'>
+                                                                        <viz:dataset>
+                                                                            <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1fd" data="">
+                                                                                <viz.data:dimensions>
+                                                                                    <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1sd" name="ITEMS" value="{data>name}" />
+                                                                                </viz.data:dimensions>
+                                                                                <viz.data:measures>
+                                                                                    <viz.data:MeasureDefinition id="_IDGenMeasureDefinitionsd1" name="MAY" value="{data>income}" />
+                                                                                    <viz.data:MeasureDefinition id="_IDGenMeasureDefinitioffn2" name="JUNE" value="{data>cost}" /> 
+                                                                                </viz.data:measures>
+                                                                            </viz.data:FlattenedDataset>
+                                                                        </viz:dataset>           
+                                                                        <viz:feeds>
+                                                                        <viz.feeds:FeedItem id='valueAxisFeed1gf' uid="valueAxis" type="Measure" values="MAY" />
+                                                                            <viz.feeds:FeedItem id='valueAxisFeed3gf' uid="valueAxis" type="Measure" values="JUNE" />
+                                                                            <viz.feeds:FeedItem id="_IDGenFeedItem2gf" uid="categoryAxis" type="Dimension" values="ITEMS" />
+                                                                        </viz:feeds>
+                                                                        
+                                                                    </viz:VizFrame> -->
+                                                                </HBox>
+                                                                <HBox id="_IDGenHBox005gf" renderType="Bare" justifyContent="SpaceBetween">
+                                                                    
+                                                                </HBox>
+
+                                                            </VBox>
+                                                        </f:content>
+                                                    </f:Card>
+                                                    </VBox>
+                                                </HBox>
+                                                
+                                            </VBox>
+                                        </f:content>  
+                            </f:Card>
+                          </layout:HorizontalLayout>
+                    </layout:VerticalLayout>
+                    <VBox id="_IDGenVBox8" alignItems="Center" class="sapUiSmallMarginTop sapUiLargeNegativeMarginBeginEnd">
+                        <VBox id="_IDGenVBox10">
+                             <f:Card id="_IDGenCard2f">
+                                <f:header>
+                                    <card:Header id="_IDGenHeaderd2"
+                                            title="Quick Links"
+                                            subtitle=""
+                                            iconSrc="" />
+                                    </f:header>
+                                    <f:content>
+                                    
+                                        <VBox id="_IDGenVBoxg4"
+                                            class="sapUiMediumMargin"
+                                            justifyContent="SpaceAround">
+                                            <HBox id="_IDGenHBoxh" justifyContent="SpaceBetween">
+                                           <VBox id="_IDGenVBox7sd">
+                                                <core:Icon id="_IDGenrIcon1"
+                                                            src="sap-icon://accelerated" class="sapUiMediumMarginBottom"> 
+                                                           
+                                                </core:Icon>
+                                                <core:Icon id="_IDGenIrcon1"
+                                                            src="sap-icon://org-chart" class="sapUiMediumMarginBottom">   
+                                                </core:Icon>
+                                                <core:Icon id="_IDGenIrrcon1"
+                                                            src="sap-icon://globe" class="sapUiMediumMarginBottom">   
+                                                </core:Icon>
+                                                <core:Icon id="_IDGenIecon1"
+                                                            src="sap-icon://leads" class="sapUiMediumMarginBottom">   
+                                                </core:Icon>
+                                                <core:Icon id="_IDGenIcon1"
+                                                            src="sap-icon://group-2" class="sapUiMediumMarginBottom ">   
+                                                </core:Icon>
+                                               </VBox>
+                                               <VBox id="_IDGenVBox8ds">
+                                               <Link id="_IDGenText7t" text="Events View"  class="sapUiMediumMarginBottom sapUiSmallMarginBegin" press="ohandle_press"   />
+                                               <Text id="_IDGenTextg7" text="Relation List" class="sapUiMediumMarginBottom sapUiSmallMarginBegin" />
+                                               <Text id="_IDGenTexgt7" text="Marketing Authorization Map View" class="sapUiMediumMarginBottom sapUiSmallMarginBegin" />
+                                               <Text id="_IDGenTexet7" text="Responsibilty assignment" class="sapUiMediumMarginBottom sapUiSmallMarginBegin"/>
+                                               <Text id="_IDGenText7"  text="Product family" class="sapUiMediumMarginBottom sapUiSmallMarginBegin" />
+                                               </VBox>
+                                            </HBox>
+                                        </VBox>
+                                    </f:content>
+                                </f:Card>
+                        </VBox>
+                    <VBox id="_IDGenVBox9">
+
+                    <HBox id="_IDGenHBox1h" >
+                                        <GenericTile id="_IDGenGenericTile2"  class="sapUiLargeNegativeMarginBegin sapUiTinyMarginTop tileLayout" header="Draft Corporate Records" sizeBehavior="Small">
+                                            <TileContent id="_IDGenTileContent2" >
+                                                <NumericContent id="_IDGenNumericContent2" value="10" withMargin="false"  icon="sap-icon://suitcase"/>
+                                            </TileContent>
+                                        </GenericTile>
+                                            <GenericTile id="_IDGenGenericTile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Draft Agency Records" sizeBehavior="Small">
+                                                    <TileContent id="_IDGenTileContent3" >
+                                                        <NumericContent id="_IDGenNumericContent3" value="33" withMargin="false"  icon="sap-icon://official-service"/>
+                                                    </TileContent>
+                                            </GenericTile>
+                                    </HBox>
+                                <HBox id="_IDGenHBox2s">
+                                    <GenericTile id="_IDGenGenericTile4" class="sapUiLargeNegativeMarginBegin sapUiTinyMarginTop tileLayout" header="Open Source Change Request" sizeBehavior="Small">
+                                        <TileContent id="_IDGenTileContent4" >
+                                            <NumericContent id="_IDGenNumericContent4" value="33" withMargin="false"  icon="sap-icon://time-entry-request"/>
+                                        </TileContent>
+                                    </GenericTile>
+                                </HBox>
+                                <HBox id="_IDGenHBox3s" >
+                                    <GenericTile id="_IDGenGenericTile5" class="sapUiLargeNegativeMarginBegin sapUiTinyMarginTop tileLayout" header="Open Substance" sizeBehavior="Small">
+                                        <TileContent id="_IDGenTileContent5" >
+                                            <NumericContent id="_IDGenNumericContent5" value="55" withMargin="false"  icon="sap-icon://lab"/>
+                                        </TileContent>
+                                    </GenericTile>
+                                    <GenericTile id="_IDGenGenericTile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Manufactured Items" sizeBehavior="Small">
+                                        <TileContent id="_IDGenTileContent6" >
+                                            <NumericContent id="_IDGenNumericContent6" value="55" withMargin="false"  icon="sap-icon://factory"/>
+                                        </TileContent>
+                                    </GenericTile>
+                                </HBox>
+                                <HBox id="_IDGenHBox4">
+                                        <GenericTile id="_IDGenGenericTile7" class="sapUiLargeNegativeMarginBegin sapUiTinyMarginTop tileLayout" header="Open Medical Devices" sizeBehavior="Small">
+                                            <TileContent id="_IDGenTileContent7" >
+                                                <NumericContent id="_IDGenNumericContent7" value="55" withMargin="false"  icon="sap-icon://syringe"/>
+                                            </TileContent>
+                                        </GenericTile>
+                                        <GenericTile id="_IDGenGenericTile8" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Medicinal Products" sizeBehavior="Small">
+                                            <TileContent id="_IDGenTileContent8" >
+                                                <NumericContent id="_IDGenNumericContent8" value="10" withMargin="false"  icon="sap-icon://temperature"/>
+                                            </TileContent>
+                                </GenericTile>
+                                </HBox>
+                                <HBox id="_IDGenHBox5">
+                                    <GenericTile id="_IDGenGenericTile9" class="sapUiLargeNegativeMarginBegin sapUiTinyMarginTop tileLayout" header="Open Packaged Medicinal" sizeBehavior="Small">
+                                        <TileContent id="_IDGenTileContent9" >
+                                            <NumericContent id="_IDGenNumericContent9" value="34" withMargin="false"  icon="sap-icon://pharmacy"/>
+                                        </TileContent>
+                                    </GenericTile>
+                                    <GenericTile id="_IDGenGenericTile10" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Pharmacetical Products" sizeBehavior="Small">
+                                        <TileContent id="_IDGenTileContent10" >
+                                            <NumericContent id="_IDGenNumericContent10" value="28" withMargin="false"  icon="sap-icon://product"/>
+                                        </TileContent>
+                                    </GenericTile>
+                                </HBox>
+                    </VBox>
+                    <VBox id="_IDGenVBox11" class="sapUiSmallMarginBegin sapUiSmallMarginTop">
+                        <SlideTile id="_IDGenSlideTile1"  transitionTime="250" displayTime="2500" class="sapUiTinyMarginBegin">
+                                        <GenericTile id="_IDGenGenericTile11"
+                                                backgroundImage=""
+                                                frameType="TwoByOne" press="onPress">
+                                            <TileContent id="_IDGenTileContent11" footer="August 21, 2016">
+                                                <NewsContent id="_IDGenNewsContent1"
+                                                        contentText="Polaris: Monitoring Real-Time and providing drugs across the Globe"
+                                                        subheader="Today, SAP News" />
+                                            </TileContent>
+                                        </GenericTile>
+                                        <GenericTile id="_IDGenGenericTile12"
+                                                backgroundImage=""
+                                                frameType="TwoByOne" state="Failed">
+                                            <TileContent id="_IDGenTileContent12" footer="February 15, 2022">
+                                                <NewsContent id="_IDGenNewsContent2"
+                                                        contentText="Polaris Unveils Powerful Comparision Tool Exclusively on Polaris.Com"
+                                                        subheader="Today, SAP News" />
+                                            </TileContent>
+                                        </GenericTile>
+                                    </SlideTile>
+                         </VBox>
+                    </VBox>
+    
+         </layout:HorizontalLayout>
+     </Panel>
+   </Page> 
+   </App>
+           
+</mvc:View>

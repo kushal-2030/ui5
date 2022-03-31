@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="Calender.event.controller.List"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:unified="sap.ui.unified"
+	xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"> 
+
+
+              <Page id="_IDGenPage1" title="{i18>Listtitle}">
+                <content>
+<Button id="df" text="first" press="ohandle_press">
+</Button>
+                </content>                                               
+              </Page>
+
+
+</mvc:View>

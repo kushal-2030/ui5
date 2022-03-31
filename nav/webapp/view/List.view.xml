@@ -1,0 +1,14 @@
+<mvc:View
+    controllerName="rot.nav.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    
+                <Page id="page" title="{i18n>title}">
+                    <content >
+                    <Button id="dd" text="1st" press="onPress"></Button>
+                    </content >
+                </Page>
+            
+</mvc:View>

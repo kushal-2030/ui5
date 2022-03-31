@@ -1,0 +1,194 @@
+<mvc:View
+    controllerName="demo1.polaris1.controller.cal"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:unified="sap.ui.unified"
+	xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:sl="sap.ui.comp.navpopover"
+    xmlns:card="sap.f.cards"
+    xmlns:f="sap.f"
+    xmlns:smartChart="sap.ui.comp.smartchart"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:layout="sap.ui.layout"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:vm="sap.ui.comp.variants">
+
+
+     
+  
+    <!-- <App id="app"> -->
+    <Page id="_IDGenPage1" showNavButton="true" navButtonPress="oNavButton_press">
+    <!-- <f:DynamicPage id="dynamicPageId" headerExpanded="{/headerExpanded}" >
+     <f:title>
+				<f:DynamicPageTitle id="_IDGenDynamicPageTitle1">
+					<f:heading>
+						<vm:VariantManagement id="_IDGenVariantManagement1" standardItemText="My Products">
+						</vm:VariantManagement>
+					</f:heading>
+					<f:actions>
+						<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+						<Button id="_IDGenButton1"
+								text="Global Action"
+								type="Transparent"/>
+						<Button id="_IDGenButton2"
+								text="Toggle Footer"
+								type="Transparent"
+								press="onToggleFooter"/>
+						<Button id="_IDGenButton3"
+								icon="sap-icon://action"
+								type="Transparent"/>
+					</f:actions>
+				</f:DynamicPageTitle>
+			</f:title> -->
+            	
+    
+    	<fb:FilterBar id="filterBar"
+		                reset="onReset" search="onSearch" clear="onClear" cancel="onCancel" 
+		                filtersDialogClosed = "onFiltersDialogClosed"
+		                showRestoreButton="true" showClearButton="true" >
+                        
+        		
+			
+			<fb:filterGroupItems >
+				<fb:FilterGroupItem id="_IDGenFilterGroupItem1" groupName="__$INTERNAL$" name="A" label="Event View Type" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchField1" showValueHelp="true"></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                </fb:filterGroupItems>
+
+                <fb:filterGroupItems>
+				<fb:FilterGroupItem id="_IDGenFilterGroupItem2" groupName="__$INTERNAL$" name="a1" label="Object" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchField2" showValueHelp="true"></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                </fb:filterGroupItems>
+
+                <fb:filterGroupItems>
+				<fb:FilterGroupItem id="_IDGenFilterGroupItem3" groupName="__$INTERNAL$" name="a2" label="ID" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchField3" showValueHelp="true" ></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                </fb:filterGroupItems>
+
+                <fb:filterGroupItems>
+				<fb:FilterGroupItem id="_IDGenFilterGroupItem4" groupName="__$INTERNAL$" name="a3" label="Version ID" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchField4" showValueHelp="true" ></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                <fb:FilterGroupItem id="_IDGenFilterGroupIteyyerm4" groupName="__$INTERNAL$" name="a4" label="Record type" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchFieldre4" showValueHelp="true" ></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                <fb:FilterGroupItem id="_IDGenFilterGroupyIteyyerm4" groupName="__$INTERNAL$" name="a5" label="Agency ID" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchFieldhre4" showValueHelp="true" ></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                <fb:FilterGroupItem id="_IDGenFilhterGroupyIteyyerm4" groupName="__$INTERNAL$" name="a6" label="Category" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchFieldhyre4" showValueHelp="true" ></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                 <fb:FilterGroupItem id="_IDGenFilghterGroupyIteyyerm4" groupName="__$INTERNAL$" name="a7" label="Sub Category" partOfCurrentVariant="true" visibleInFilterBar="true">
+					<fb:control>
+						<Input id="_IDGenSearchFvieldhyre4" showValueHelp="true" ></Input>
+					</fb:control>
+				</fb:FilterGroupItem>
+                 <fb:FilterGroupItem id="_IDGenFilghterGroutpyIteyyerm4" groupName="__$INTERNAL$" name="a8" label="Submisson Date" partOfCurrentVariant="true" visibleInFilterBar="true">
+						<fb:control>
+						<DatePicker id="_IDGenDatePicker1"  showValueStateMessage="true"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            
+		</fb:FilterBar>
+   
+    	                <!-- <smartFilterBar:SmartFilterBar id="smartF7sail89terBar">
+                        	<smartFilterBar:controlConfiguration>
+                                	  <smartFilterBar:ControlConfiguration id="_IDGenContrlolConfiugasduration1"
+                                                    key="MyOwnFilterFieldas099" index="99" label="Kushal"
+                                                    groupId="_BASIC979" >
+                                                        <smartFilterBar:customControl>
+                                                                 <m:Select id="foluo" >
+                                                                 <core:Item id="_IDlGenfauItem2" key="1" text="ONE"/>
+                                                                 <core:Item id="_IDGenIuafsatlem3" key="2" text="TWO"/>
+                                                                 <core:Item id="_IDGenIutlemaf4" key="3" text="THREE"/>
+                                                                 </m:Select>
+								                         </smartFilterBar:customControl>
+							                        </smartFilterBar:ControlConfiguration>
+                            </smartFilterBar:controlConfiguration>
+
+                        </smartFilterBar:SmartFilterBar> -->
+    <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+			<PlanningCalendar
+			id="PC1"
+			startDate="{path: '/startDate'}"
+			rows="{path: '/people'}"
+			appointmentsVisualization="Filled"
+			appointmentSelect="handleAppointmentSelect"
+			showEmptyIntervalHeaders="false"
+			showWeekNumbers="true">
+			<toolbarContent>
+				<Title id="_IDGenTitle1" text="Event Calender" titleStyle="H4"/>
+			</toolbarContent>
+			<rows>
+				<PlanningCalendarRow id="_IDGenPlanningCalendarRow1"
+					icon="{pic}"
+					title="{name}"
+					text="{role}"
+					appointments="{path : 'appointments', templateShareable: false}"
+					intervalHeaders="{path: 'headers', templateShareable: false}">
+					<customData>
+						<core:CustomData key="emp-name" value="{name}" writeToDom="true"/>
+					</customData>
+					<appointments>
+						<unified:CalendarAppointment id="_IDGenCalendarAppointment1"
+							startDate="{start}"
+							endDate="{end}"
+							icon="{pic}"
+							title="{title}"
+							text="{info}"
+							type="{type}"
+							tentative="{tentative}">
+						</unified:CalendarAppointment>
+					</appointments>
+					<intervalHeaders>
+						<unified:CalendarAppointment id="_IDGenCalendarAppointment2"
+							startDate="{start}"
+							endDate="{end}"
+							icon="{pic}"
+							title="{title}"
+							type="{type}">
+						</unified:CalendarAppointment>
+					</intervalHeaders>
+				</PlanningCalendarRow>
+			</rows>
+		</PlanningCalendar>
+		<!-- <Label id="_IDGenLabel1" text="Add available built-in views to the example:"/>
+		<MultiComboBox id="_IDGenMultiComboBox1"
+				selectionFinish="handleSelectionFinish"
+				width="230px"
+				placeholder="Choose built-in views">
+			<items>
+				<core:Item id="_IDGenItem1" key="Hour" text="Hour" />
+				<core:Item id="_IDGenItem2" key="Day" text="Day" />
+				<core:Item id="_IDGenItem3" key="Month" text="Month" />
+				<core:Item id="_IDGenItem4" key="Week" text="1 week" />
+				<core:Item id="_IDGenItem5" key="One Month" text="1 month" />
+			</items>
+		</MultiComboBox> -->
+	</VBox>
+     <!-- </f:DynamicPage > -->
+     </Page >
+    <!-- </App> -->
+    
+
+
+</mvc:View>
